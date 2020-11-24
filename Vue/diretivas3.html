@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div id="app">
+        <div v-for="img in srcimg">
+            <img :src="img" width="100px">
+        </div>
+
+        <p v-for="(fruta, key) in frutas">
+            {{key}} - {{fruta.nome}} - {{fruta.preco}} 
+        </p>
+        
+
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>  
+        new Vue({
+            el: '#app',
+            data: {
+                textoDigitado: '',
+                srcimg: ["vue.png", "bart.png", "angular.png"],
+                frutas: [{
+                            nome: "maçã",
+                            preco: 5.0
+                        }, 
+                        {
+                            nome: "uva",
+                            preco: 7.0
+                        }, 
+                        {
+                            nome: "pera",
+                            preco: 9.0
+                        }],
+                titleimg: "Logo Vue"     
+            },
+        });
+    </script> 
+</body>
+</html>
